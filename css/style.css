@@ -10,70 +10,73 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	line-height: 1.6;
-	background-color: #f9f9f9;
+	background: radial-gradient(circle at top center, #d3397d, #44116d, #140645);
+	
+}
+.quote::after,
+.quote::before,
+.quoteText,
+.quoteAuthor {
+	color: white;
 }
 
+/*Layout*/
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: "Courier New", Courier, monospace;
-	font-weight: bold;
-	line-height: 1;
-	text-transform: uppercase;
-	margin: 0 0 1.6rem;
+main {
+	border: solid white;
+	margin: 3%;
 }
-
-p {
-	font-family: Arial, Helvetica, sans-serif;
-	line-height: 1.6;
-	margin: 0 0 1.6rem;
-}
-
-a {
-	color: #0056b3;
-	border-bottom: 2px solid transparent;
-	transition: all 0.5s ease-in-out;
-}
-
-a:hover {
-	color: #002348;
-	border-bottom: 2px solid #002348;
-}
-
-hr {
-	margin: 3.2rem 1.6rem;
-	color: #555555;
-	border-color: #555555;
-}
-
-/* Layout */
 
 .container {
 	padding: 0;
 	margin: 0 auto;
 	width: 100%;
-	max-width: 600px;
-	border: 2px #0056b3
-	
+	max-width: 1000px;
+	display: flex;
+	justify-content: center;
 }
 
-main {
+
+.quote {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	height: 100vh;
+	width: 100vh;
 	justify-content: center;
-	border: 2px solid red;
-	width: 100%;
-	height: auto;
-	max-height: 100vh;
+	align-items: center;
+	
+
 }
 
+.quote::before {
+	content: open-quote;
+	align-self: flex-start;
+	font-size: 15vh;
+	font-weight: bold;
+	margin: 0;
+}
 
+.quote::after {
+	content: close-quote;
+	align-self: flex-end;
+	font-size: 15vh;
+	font-weight: bold;
+	margin: 0;
+}
+.quoteText {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 10%;
+	font-size: 18pt;
+	text-align: center;
+	font-family: Georgia, serif;
+}
+
+.quoteAuthor {
+	text-transform: uppercase;
+	font-size: 10pt;
+}
 /* Media Queries */
 
 @media (min-width: 699px) {
